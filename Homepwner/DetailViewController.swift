@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: CustomUITextFieldClass!
     @IBOutlet weak var serialTextField: CustomUITextFieldClass!
     @IBOutlet weak var valueTextField: CustomUITextFieldClass!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet var dateButton: UIButton!
     
     var item: Item! {
         didSet {
@@ -39,7 +39,7 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
         nameTextField.text = item.name
         valueTextField.text = numberFormatter.string(from: item.valueInDollars as NSNumber)
-        dateLabel.text = dateFormatter.string(from: item.dateCreated as Date)
+        dateButton.setTitle(dateFormatter.string(from: item.dateCreated as Date), for: .normal)
         serialTextField.text = item.serialNumber
     }
     
@@ -55,6 +55,13 @@ class DetailViewController: UIViewController {
             item.valueInDollars = 0
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ChangeDate" {
+            let dateViewController = segue.destination as! DateViewController
+            dateViewController.item = item
+        }
     }
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {

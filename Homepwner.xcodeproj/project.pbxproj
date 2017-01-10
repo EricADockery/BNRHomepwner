@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53F489261E24D70E00F8E88F /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F489251E24D70E00F8E88F /* DateViewController.swift */; };
 		71EADDBB1E1D7C8100FAA880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EADDBA1E1D7C8100FAA880 /* AppDelegate.swift */; };
 		71EADDC01E1D7C8100FAA880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71EADDBE1E1D7C8100FAA880 /* Main.storyboard */; };
 		71EADDC21E1D7C8100FAA880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71EADDC11E1D7C8100FAA880 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53F489251E24D70E00F8E88F /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		71EADDB71E1D7C8100FAA880 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71EADDBA1E1D7C8100FAA880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71EADDBF1E1D7C8100FAA880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		71EADDD21E1D7E5500FAA880 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				53F489251E24D70E00F8E88F /* DateViewController.swift */,
 				71EADDCC1E1D7D4000FAA880 /* ItemsViewController.swift */,
 				71EADDDA1E20156200FAA880 /* DetailViewController.swift */,
 				71EADDD61E1EA9F500FAA880 /* ItemViewControllerTableViewExtension.swift */,
@@ -193,6 +196,7 @@
 				71EADDBB1E1D7C8100FAA880 /* AppDelegate.swift in Sources */,
 				71EADDD71E1EA9F500FAA880 /* ItemViewControllerTableViewExtension.swift in Sources */,
 				71EADDDB1E20156200FAA880 /* DetailViewController.swift in Sources */,
+				53F489261E24D70E00F8E88F /* DateViewController.swift in Sources */,
 				71EADDDD1E23E52E00FAA880 /* CustomUITextFieldClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
