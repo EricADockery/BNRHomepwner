@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		53F489261E24D70E00F8E88F /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F489251E24D70E00F8E88F /* DateViewController.swift */; };
+		53F489281E24F01300F8E88F /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F489271E24F01300F8E88F /* ImageStore.swift */; };
 		71EADDBB1E1D7C8100FAA880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EADDBA1E1D7C8100FAA880 /* AppDelegate.swift */; };
 		71EADDC01E1D7C8100FAA880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71EADDBE1E1D7C8100FAA880 /* Main.storyboard */; };
 		71EADDC21E1D7C8100FAA880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71EADDC11E1D7C8100FAA880 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		53F489251E24D70E00F8E88F /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		53F489271E24F01300F8E88F /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		71EADDB71E1D7C8100FAA880 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71EADDBA1E1D7C8100FAA880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71EADDBF1E1D7C8100FAA880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				71EADDCE1E1D7DAE00FAA880 /* Item.swift */,
 				71EADDD41E1D802500FAA880 /* ItemStore.swift */,
+				53F489271E24F01300F8E88F /* ImageStore.swift */,
 				71EADDDC1E23E52E00FAA880 /* CustomUITextFieldClass.swift */,
 			);
 			name = Models;
@@ -192,6 +195,7 @@
 				71EADDCD1E1D7D4000FAA880 /* ItemsViewController.swift in Sources */,
 				71EADDCF1E1D7DAE00FAA880 /* Item.swift in Sources */,
 				71EADDD91E1EDC5800FAA880 /* ItemCell.swift in Sources */,
+				53F489281E24F01300F8E88F /* ImageStore.swift in Sources */,
 				71EADDD51E1D802500FAA880 /* ItemStore.swift in Sources */,
 				71EADDBB1E1D7C8100FAA880 /* AppDelegate.swift in Sources */,
 				71EADDD71E1EA9F500FAA880 /* ItemViewControllerTableViewExtension.swift in Sources */,

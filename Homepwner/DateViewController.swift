@@ -13,7 +13,7 @@ class DateViewController: UIViewController {
     var item: Item!
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateItemDatePicker.minimumDate = item.dateCreated as Date
+        updateItemDatePicker.date = item.dateCreated as Date
     }
    
     override func viewWillDisappear(_ animated: Bool) {

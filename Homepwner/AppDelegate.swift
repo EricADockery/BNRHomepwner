@@ -17,11 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        //Create the gloabal ItemStore()
+        //Create the gloabal ItemStore() and ImageStore()
         let itemStore = ItemStore()
+        let imageStore = ImageStore()
         let navController = window!.rootViewController as! UINavigationController
         let itemsController = navController.topViewController as! ItemsViewController
         itemsController.itemStore = itemStore
+        itemsController.imageStore = imageStore
         return true
     }
 

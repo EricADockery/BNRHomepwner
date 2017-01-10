@@ -155,13 +155,32 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqt-bo-Yej">
-                                        <rect key="frame" x="0.0" y="90" width="343" height="497"/>
+                                        <rect key="frame" x="0.0" y="90" width="343" height="30"/>
                                         <state key="normal" title="Date Created"/>
                                         <connections>
                                             <segue destination="idT-zt-ZLz" kind="show" identifier="ChangeDate" id="XoJ-g4-pt5"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="r12-9I-8bk">
+                                        <rect key="frame" x="0.0" y="120" width="343" height="423"/>
+                                    </imageView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdH-Yk-kmY">
+                                        <rect key="frame" x="0.0" y="543" width="343" height="44"/>
+                                        <items>
+                                            <barButtonItem systemItem="camera" id="aTB-U0-BkX">
+                                                <connections>
+                                                    <action selector="takePicture:" destination="6ex-93-xaT" id="JJL-mt-twB"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hdH-Yk-kmY" secondAttribute="bottom" id="O33-6f-eCd"/>
+                                    <constraint firstItem="hdH-Yk-kmY" firstAttribute="top" secondItem="r12-9I-8bk" secondAttribute="bottom" id="Rh9-R8-Xak"/>
+                                    <constraint firstItem="hdH-Yk-kmY" firstAttribute="leading" secondItem="nzi-kZ-9hs" secondAttribute="leading" id="kHF-Hu-GEf"/>
+                                    <constraint firstAttribute="trailing" secondItem="hdH-Yk-kmY" secondAttribute="trailing" id="zQG-aX-hfk"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,6 +197,7 @@
                     </view>
                     <connections>
                         <outlet property="dateButton" destination="yqt-bo-Yej" id="yVc-Ue-tKy"/>
+                        <outlet property="itemImageView" destination="r12-9I-8bk" id="CxV-hm-mYj"/>
                         <outlet property="nameTextField" destination="7eY-t5-nUa" id="VxG-Q8-WKq"/>
                         <outlet property="serialTextField" destination="R80-Cu-Lnh" id="tt5-W9-ive"/>
                         <outlet property="valueTextField" destination="nth-oC-hdk" id="cfA-Fy-dtT"/>

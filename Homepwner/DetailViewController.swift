@@ -13,12 +13,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var serialTextField: CustomUITextFieldClass!
     @IBOutlet weak var valueTextField: CustomUITextFieldClass!
     @IBOutlet var dateButton: UIButton!
+    @IBOutlet var itemImageView: UIImageView!
     
     var item: Item! {
         didSet {
             navigationItem.title = item.name
         }
     }
+    var imageStore: ImageStore!
     
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -66,6 +68,29 @@ class DetailViewController: UIViewController {
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+
+}
+
+extension DetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        itemImageView.image = image
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func takePicture(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+        }
+        else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+        
     }
     
 }
