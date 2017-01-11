@@ -72,6 +72,13 @@ class DetailViewController: UIViewController {
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    @IBAction func removePicture(_ sender: Any) {
+        if itemImageView.image != nil {
+            itemImageView.image = nil
+            imageStore.deleteImageForKey(key: item.itemKey)
+        }
+    }
+    
 
 }
 
@@ -97,7 +104,7 @@ extension DetailViewController: UIImagePickerControllerDelegate, UINavigationCon
         present(imagePicker, animated: true, completion: nil)
         
     }
-    
+
 }
 
 extension DetailViewController: UITextFieldDelegate {
