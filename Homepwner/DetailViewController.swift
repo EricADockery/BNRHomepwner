@@ -43,6 +43,9 @@ class DetailViewController: UIViewController {
         valueTextField.text = numberFormatter.string(from: item.valueInDollars as NSNumber)
         dateButton.setTitle(dateFormatter.string(from: item.dateCreated as Date), for: .normal)
         serialTextField.text = item.serialNumber
+        let key = item.itemKey
+        let imageToDisplay = imageStore.imageForKey(key: key)
+        itemImageView.image = imageToDisplay
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -76,6 +79,7 @@ extension DetailViewController: UIImagePickerControllerDelegate, UINavigationCon
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageStore.setImage(image: image, forKey: item.itemKey)
         itemImageView.image = image
         dismiss(animated: true, completion: nil)
     }
