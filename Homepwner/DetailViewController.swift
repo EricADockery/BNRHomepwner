@@ -95,6 +95,13 @@ extension DetailViewController: UIImagePickerControllerDelegate, UINavigationCon
         let imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let crosshair = UIButton(type: .contactAdd)
+            crosshair.tintColor = UIColor.white
+            crosshair.translatesAutoresizingMaskIntoConstraints = false
+            imagePicker.cameraOverlayView?.addSubview(crosshair)
+            imagePicker.cameraOverlayView?.isUserInteractionEnabled = false
+            crosshair.centerXAnchor.constraint(equalTo: (imagePicker.cameraOverlayView?.centerXAnchor)!).isActive = true
+            crosshair.centerYAnchor.constraint(equalTo: (imagePicker.cameraOverlayView?.centerYAnchor)!).isActive = true
             imagePicker.sourceType = .camera
         }
         else {
