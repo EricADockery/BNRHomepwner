@@ -78,7 +78,7 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
         imageStore.setImage(image: image, forKey: item.itemKey)
         itemImageView.image = image
         dismiss(animated: true, completion: nil)
@@ -86,6 +86,7 @@ extension DetailViewController: UIImagePickerControllerDelegate, UINavigationCon
     
     @IBAction func takePicture(_ sender: Any) {
         let imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
         }
